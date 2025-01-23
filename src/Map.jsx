@@ -8,8 +8,8 @@ import L from 'leaflet';
 
 // Create a custom Leaflet icon
 const customIcon = L.icon({
-    iconUrl: "/marker-icon.png", // Use the path from the public folder
-  shadowUrl: "/marker-shadow.png", // Use the path from the public folder
+    iconUrl: `${process.env.PUBLIC_URL}/marker-icon.png`, // Use the path from the public folder
+  shadowUrl: `${process.env.PUBLIC_URL}/marker-shadow.png`, // Use the path from the public folder
     iconSize: [25, 41], // Default size of the icon
     iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
     popupAnchor: [1, -34], // Popup anchor point relative to the iconAnchor
