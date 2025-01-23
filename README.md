@@ -1,6 +1,6 @@
 ## IP Address Finder
 
-A React-based web application that allows users to find detailed information about an IP address. This includes its geographical location displayed on an interactive map using Leaflet, as well as additional data such as country, city, and other relevant details.
+A React-based web application that allows users to find information about an IP address. This includes its geographical location displayed on an interactive map using Leaflet, as well as additional data such as country, city, and other relevant details. It retrieves the information of the user
 
 # Features
 - Interactive Map: Displays the location of the IP address using Leaflet.
