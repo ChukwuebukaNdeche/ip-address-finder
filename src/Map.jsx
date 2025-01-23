@@ -4,8 +4,8 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 // Import marker icons
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerIconShadow from 'leaflet/dist/images/marker-shadow.png';
+import markerIcon from '../public/images/marker-icon.png';
+import markerIconShadow from '../public/images/marker-shadow.png';
 
 // Create a custom Leaflet icon
 const customIcon = L.icon({
