@@ -4,13 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 // Import marker icons
-import markerIcon from '../public/images/marker-icon.png';
-import markerIconShadow from '../public/images/marker-shadow.png';
+
 
 // Create a custom Leaflet icon
 const customIcon = L.icon({
-    iconUrl: markerIcon, // Path to marker icon
-    shadowUrl: markerIconShadow, // Path to shadow icon
+    iconUrl: "/marker-icon.png", // Use the path from the public folder
+  shadowUrl: "/marker-shadow.png", // Use the path from the public folder
     iconSize: [25, 41], // Default size of the icon
     iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
     popupAnchor: [1, -34], // Popup anchor point relative to the iconAnchor
