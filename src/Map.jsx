@@ -1,6 +1,22 @@
 import React, {useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Import marker icons
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerIconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+// Create a custom Leaflet icon
+const customIcon = L.icon({
+    iconUrl: markerIcon, // Path to marker icon
+    shadowUrl: markerIconShadow, // Path to shadow icon
+    iconSize: [25, 41], // Default size of the icon
+    iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
+    popupAnchor: [1, -34], // Popup anchor point relative to the iconAnchor
+    shadowSize: [41, 41], // Size of the shadow
+  });
+
 
 function UpdateCenter({ lat, lon }) {
     const map = useMap();
@@ -12,7 +28,7 @@ function UpdateCenter({ lat, lon }) {
 
 
 function Map({ lat, lon }) {
-
+    
 
     return (
         <div className='map'>
@@ -28,7 +44,7 @@ function Map({ lat, lon }) {
                 {/* Update the center dynamically */}
                 <UpdateCenter lat={lat} lon={lon} />
                 {/* Marker with a popup */}
-                <Marker position={[lat, lon]}>
+                <Marker position={[lat, lon]} icon={customIcon}>
                     <Popup>
                         A pretty popup! <br /> Easily customizable.
                     </Popup>
